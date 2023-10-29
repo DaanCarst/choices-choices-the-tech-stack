@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
           </h1>
         </section>
         
-        <ul>
+        <ul class="partners-container">
           {websites.map((website, index) => (
             <a class="partners">
               <li key={index}>{website.titel}</li>
@@ -57,7 +57,9 @@ export const query = graphql`
   query MyQuery {
     website {
       websites {
+        id
         titel
+        slug
         homepage
       }
     }
