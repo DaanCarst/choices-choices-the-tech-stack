@@ -1,0 +1,115 @@
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #202020;
+    padding: 1em;
+    border-bottom: 2px solid #454545;
+}
+
+.logo-select a {
+    display: flex;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.information-icon-img {
+    display: block;
+}
+
+.heading {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--c-container);
+    padding: 2em;
+    border-top: 12px solid var(--c-pink);
+    margin: 1em 1em;
+    border-radius: 0.5em;
+}
+
+/* Informatie pagina */
+
+.top-container {
+    grid-area: top;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.left-container {
+    grid-area: left;
+}
+
+.right-container {
+    grid-area: right;
+}
+
+.bot-container {
+    grid-area: bot;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "top top"
+    "left right"
+    "bot bot";
+    margin: 1em 1em;
+    gap: 1em;
+}
+
+.text-image {
+    height: 13em;
+}
+
+.top-container, .left-container, .right-container, .bot-container {
+    padding: 2em;
+    background-color: var(--c-container);
+	/* border-top: 12px solid var(--c-pink); */
+	border-radius: 0.5em;
+}
+
+span {
+    color: var(--c-pink);
+}
+
+/* .text-container {
+    max-width: 50em;
+} */
+
+.image-container {
+    margin-left: auto;
+    align-self: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "top"
+    "left"
+    "right"
+    "bot";
+  }
+
+  .text-image {
+    height: 10em;
+    }
+}
