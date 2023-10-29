@@ -38,6 +38,31 @@ nav {
     border-radius: 0.5em;
 }
 
+.partners {
+    display: flex;
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.25em;
+    color: var(--c-text);
+    text-decoration: none;
+    background-color: var(--c-container);
+    padding: 1em;
+    border-radius: 0.5em;
+    border: solid 1px var(--c-container-stroke);
+    width: 100%;
+    transition: 0.25s ease;
+}
+
+
+
+.partners:hover {
+    border: solid 1px var(--c-pink);
+}
+
 /* Informatie pagina */
 
 .top-container {

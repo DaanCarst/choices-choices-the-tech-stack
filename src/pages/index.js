@@ -8,6 +8,7 @@ import logo from "../images/vervoerregio_amsterdam_logo.svg";
 import dark from "../images/dark_mode_icon.svg";
 import info from "../images/information_icon.svg";
 
+
 const IndexPage = ({ data }) => {
   const websites = data.website.websites;
 
@@ -29,6 +30,7 @@ const IndexPage = ({ data }) => {
       </header>
 
       <main>
+
         <section class="heading">
           <h1>
             Partners overzicht
@@ -37,9 +39,13 @@ const IndexPage = ({ data }) => {
         
         <ul>
           {websites.map((website, index) => (
-            <a><li key={index}>{website.titel}</li></a>
+            <a class="partners">
+              <li key={index}>{website.titel}</li>
+              <li key={index}>{website.homepage}</li>
+            </a>
           ))}
         </ul>
+
       </main>
     </body>
   );
