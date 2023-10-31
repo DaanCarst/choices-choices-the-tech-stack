@@ -1,5 +1,5 @@
 node_modules/
 .cache/
 public
+.env.development
 .env
-gatsby-config.js
